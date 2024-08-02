@@ -49,3 +49,9 @@
     cursor: pointer;
 }
 
+.disabled{
+    background: lightgray;
+    color : gray;
+    /* cursor: not-allowed; */
+    pointer-events: none;
+}

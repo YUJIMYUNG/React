@@ -1,4 +1,5 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import product from "../data";
 
 let slice1 = createSlice({
     name: "이름",
@@ -12,10 +13,19 @@ let slice1 = createSlice({
     }
 })
 
+let slice2 = createSlice({
+    name : 'product',
+    initialState : product,
+    reducers:{
+
+    }
+})
+
 export let {changeData} = slice1.actions;
 
 export default configureStore({
     reducer:{
-        slice1 : slice1.reducer
+        slice1 : slice1.reducer,
+        slice2 : slice2.reducer
     }
 })

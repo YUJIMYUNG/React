@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.detail-img{
+    padding: 0px 15px 0px 10px;
+
+}
+
+.info{
+    width: 50%;
+}
+
+.color,
+.size{
+    display: flex;
+    padding-bottom: 20px;
+
+}
+
+.color-button,
+.size-btn{
+    border: 1px solid gray;
+    border-radius: 8px;
+    background : transparent ;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-button:hover,
+.color-button:focus,
+.color-button:active,
+.size-btn:hover,
+.size-btn:focus,
+.size-btn:active,
+.color-button.selected,
+.size-btn.selected{
+    background-color: #333;
+    color: #fff;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+

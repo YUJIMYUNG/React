@@ -1,4 +1,4 @@
-let data = [
+let product = [
     {
         id : 0,
         title : "빵",
@@ -21,4 +21,4 @@ let data = [
 
 ]
 
-export default data;
+export default product;

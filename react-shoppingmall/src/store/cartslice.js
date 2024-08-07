@@ -22,9 +22,33 @@ const cartSlice = createSlice({
                 state.cartItems.push(newItem);
                 console.log("추가 되었음");
             }
+        },
+        increaseCount(state, action){
+             const idToIncrease = action.payload;
+             const item = state.cartItems.find(item => item.id === idToIncrease.id);
+             if(item){
+                item.count++;
+             }
+        },
+        decreaseCount(state, action){
+            const idToIncrease = action.payload;
+             const item = state.cartItems.find(item => item.id === idToIncrease.id);
+             if(item){
+                item.count--;
+                if(item.count <= 0){
+                    item.count = 0;
+                }
+             }
+        },
+        delToCart(state, action){
+            const selected = action.payload;
+            return{
+                 ...state,
+                 cartItems : state.cartItems.filter(item => item.id !== selected)
+            }
         }
     }
 })
 
-export const {addToCart}  = cartSlice.actions;
+export const {addToCart, increaseCount, decreaseCount, delToCart}  = cartSlice.actions;
 export default cartSlice.reducer;

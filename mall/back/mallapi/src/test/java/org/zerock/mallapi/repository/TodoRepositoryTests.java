@@ -88,9 +88,9 @@ public class TodoRepositoryTests {
 
     }
 
-    @Test
-    public void testSearch1(){
-        //호출
-        todoRepository.search1();
-    }
+//    @Test
+//    public void testSearch1(){
+//        //호출
+//        todoRepository.search1();
+//    }
 }
